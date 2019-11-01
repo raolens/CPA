@@ -54,57 +54,58 @@ html, body {
 
 .empty {
     text-align: center;
+    padding: 4px 2px 0px 0px;
 }
 
-.c-0 {
+.c1 {
     text-align: left;
-    padding: 10px 0px 0px 10px;
-    line-height: 40px;
+    padding: 10px 0px 0px 15px;
+    line-height: 32px;
     font-size: 18px;
+    /* 第1层目录*，章或者节*/
 }
 
-.c-1 {
+.c2 {
     width: auto;
     text-align: left;
-    line-height: 27px;
+    line-height: 28px;
+    font-size: 17px;
+    padding: 0px 0px 0px 15px;
+    color: #009999
+}
+  /* 第2层目录*/
+.c3 {
+    width: auto;
+    text-align: left;
+    line-height: 24px;
     font-size: 16px;
-    padding: 0px 0px 0px 20px;
-    color: #1f585c
+    padding: 0px 0px 0px 15px;
+    color: #cc5500
 }
 
-.c-2 {
+.c4 {
     width: auto;
     text-align: left;
     line-height: 24px;
     font-size: 15px;
-    padding: 0px 0px 0px 25px;
-    color: #009944
+    padding: 0px 0px 0px 15px;
+    color: #097c25
 }
 
-.c-3 {
-    width: auto;
-    text-align: left;
-    line-height: 24px;
-    font-size: 15px;
-    padding: 0px 0px 0px 30px;
-    color: #1f585c
-}
-
-.c-4 {
+.c5 {
     width: auto;
     text-align: left;
     line-height: 21px;
     font-size: 14px;
-    padding: 0px 0px 0px 35px;
+    padding: 0px 0px 0px 15px;
     color: #000
 }
 
-.c-p {
+.cp {
     width: auto;
     text-align: left;
     line-height: 21px;
-    font-size: 12px;
-    padding: 0px 0px 0px 35px;
+    font-size: 14px;
     color: #000;
     font-style: oblique;
 }
