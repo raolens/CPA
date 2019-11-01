@@ -106,7 +106,8 @@ html, body {
     text-align: left;
     line-height: 21px;
     font-size: 14px;
-    color: #5c5c5c;
-    border-style: solid;
-    background-color: #c8f9fc
-}
+    color: #808080;
+    border-style: dashed;
+    border-width: 1px;
+    border-color:  #1f585c;
+    }
