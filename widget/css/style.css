@@ -106,6 +106,7 @@ html, body {
     text-align: left;
     line-height: 21px;
     font-size: 14px;
-    color: #000;
-    font-style: oblique;
+    color: #5c5c5c;
+    border-style: solid;
+    background-color: #c8f9fc
 }
