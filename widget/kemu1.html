@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>会计</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+        #wrap {
+            height: 100%;
+        }
+
+        header {
+            background-color: #1f585c;
+        }
+
+        header ul li {
+            height: 36x;
+            line-height: 36px;
+            text-align: center;
+            display: none;
+            color: #fff;
+            position: relative;
+            font-size: 20px;
+        }
+
+        header ul li.active {
+            display: block;
+        }
+
+        #footer {
+            background-color: #1f585c;
+        }
+
+        #footer ul li {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-size: auto;
+            text-align: center;
+            color: #4fdfe9;
+        }
+
+        #footer ul li.active {
+            color: #fff;
+        }
+
+        .flex-con {
+            overflow: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="flex-wrap flex-vertical">
+        <header>
+            <ul>
+                <li class="border-b active">目录：</li>
+                <li class="border-b">第一章：</li>
+                <li class="border-b">第二章：</li>
+                <li class="border-b">第三章：</li>
+                <li class="border-b">第四章：</li>
+                <li class="border-b">第五章：</li>
+                <li class="border-b">第六章：</li>
+                <li class="border-b">第七章：</li>
+                <li class="border-b">第八章：</li>
+            </ul>
+        </header>
+        <div id="main" class="flex-con">
+
+        </div>
+        <footer>
+            <div id="footer" class="border-t">
+                <ul class="flex-wrap">
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con active">目录</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">一</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">二</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">三</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">四</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">五</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">六</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">七</li>
+                    <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">八</li>
+                </ul>
+            </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $api.fixStatusBar($api.dom('header'));
+        api.setStatusBarStyle({
+            style: 'dark',
+            color: '#6ab494'
+        });
+        funIniGroup();
+    }
+
+    function funIniGroup() {
+        var eHeaderLis = $api.domAll('header li'),
+            frames = [];
+        for (var i = 0, len = eHeaderLis.length; i < len; i++) {
+            frames.push({
+                name: 'frame_kj' + i,
+                url: './html/frame_kj' + i + '.html',
+                bgColor: 'rgba(0,0,0,.2)',
+                bounces: true
+            })
+        }
+        api.openFrameGroup({
+            name: 'group',
+            scrollEnabled: false,
+            rect: {
+                x: 0,
+                y: $api.dom('header').offsetHeight,
+                w: api.winWidth,
+                h: $api.dom('#main').offsetHeight
+            },
+            index: 0,
+            frames: frames
+        }, function(ret, err) {
+
+        });
+    }
+
+    // 随意切换按钮
+    function randomSwitchBtn(tag) {
+        if (tag == $api.dom('#footer li.active')) return;
+        var eFootLis = $api.domAll('#footer li'),
+            eHeaderLis = $api.domAll('header li'),
+            index = 0;
+        for (var i = 0, len = eFootLis.length; i < len; i++) {
+            if (tag == eFootLis[i]) {
+                index = i;
+            } else {
+                $api.removeCls(eFootLis[i], 'active');
+                $api.removeCls(eHeaderLis[i], 'active');
+            }
+        }
+        $api.addCls(eFootLis[index], 'active');
+        $api.addCls(eHeaderLis[index], 'active');
+        api.setFrameGroupIndex({
+            name: 'group',
+            index: index
+        });
+    }
+</script>
