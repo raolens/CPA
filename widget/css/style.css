@@ -103,7 +103,21 @@ html, body {
     width: auto;
     text-align: left;
     line-height: 21px;
-    font-size: 14px;
+    font-size: 13px;
     color: #808080;
-    font-style: italic;
     }
+
+.gs{
+  color: #fff;
+  text-align: center;
+  background-color: #eb6100;
+}
+
+.dy{
+  width: auto;
+  text-align: left;
+  line-height: 21px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #0068b7;
+}
