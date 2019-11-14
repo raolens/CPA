@@ -57,7 +57,7 @@
     <div id="wrap" class="flex-wrap flex-vertical">
         <header>
             <ul>
-                <li class="border-b active">目录：</li>
+                <li class="border-b active">会计</li>
                 <li class="border-b">第一章：</li>
                 <li class="border-b">第二章：</li>
                 <li class="border-b">第三章：</li>
@@ -92,6 +92,7 @@
 <script type="text/javascript" src="script/api.js"></script>
 <script type="text/javascript">
     apiready = function() {
+      $api.fixStatusBar($api.dom('header'));
         funIniGroup();
     }
 
