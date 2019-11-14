@@ -52,37 +52,37 @@ html, body {
 
 .empty {
     text-align: center;
-    padding: 4px 2px 0px 0px;
+    padding: 4px 4px 0px 0px;
 }
 
 .c1 {
-    text-align: left;
+    text-align: justify;
     padding: 10px 0px 0px 10px;
-    line-height: 30px;
+    line-height: 2em;
     font-size: 18px;
     /* 第1层目录*，章或者节*/
 }
 
 .c2 {
     width: auto;
-    text-align: left;
-    line-height: 28px;
+    text-align: justify;
+    line-height: 2em;
     font-size: 17px;
     color: #009999
 }
   /* 第2层目录*/
 .c3 {
     width: auto;
-    text-align: left;
-    line-height: 26px;
+    text-align: justify;
+    line-height: 2em;
     font-size: 16px;
     color: #cc5500
 }
 
 .c4 {
     width: auto;
-    text-align: left;
-    line-height: 24px;
+    text-align: justify;
+    line-height: 2em;
     font-size: 15px;
     padding: 0px 0px 0px 15px;
     color: #009999
@@ -90,8 +90,8 @@ html, body {
 
 .c5 {
     width: auto;
-    text-align: left;
-    line-height: 21px;
+    text-align: justify;
+    line-height:2em;
     font-size: 14px;
     padding: 0px 0px 0px 15px;
     color: #000
@@ -99,15 +99,15 @@ html, body {
 
 .cp {
     width: auto;
-    text-align: left;
-    line-height: 21px;
+    text-align: justify;
+    line-height: 1.6em;
     font-size: 13px;
     color: #808080;
     }
 
 .gs{
   width: auto;
-  line-height: 21px;
+  line-height: 2em;
   font-size: 13px;
   color: #fff;
   text-align: center;
@@ -116,8 +116,8 @@ html, body {
 
 .dy{
   width: auto;
-  text-align: left;
-  line-height: 21px;
+  text-align: justify;
+  line-height: 1.6em;
   font-size: 13px;
   color: #fff;
   background-color: #009999;
